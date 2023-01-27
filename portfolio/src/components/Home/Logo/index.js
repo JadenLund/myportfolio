@@ -1,13 +1,13 @@
-import './index.scss';
-import LogoS from '../../../assets/images/logo-s.png'
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
-import { useRef, useEffect } from 'react';
+import { useEffect, useRef } from 'react'
 import gsap from 'gsap-trial'
+import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
+import LogoS from '../../../assets/images/logo-s.png'
+import './index.scss'
 
 const Logo = () => {
-    const bgRef = useRef();
-    const outlineLogoRef = useRef();
-    const solidLogoRef = useRef();
+    const bgRef = useRef()
+    const outlineLogoRef = useRef()
+    const solidLogoRef = useRef()
 
     useEffect(() => {
         gsap.registerPlugin(DrawSVGPlugin)
@@ -22,6 +22,7 @@ const Logo = () => {
                 drawSVG: 0,
                 duration: 20,
             })
+
         gsap.fromTo(
             solidLogoRef.current,
             {
@@ -34,15 +35,23 @@ const Logo = () => {
             }
         )
     }, [])
-    return (
 
-        <div className='logo-container' ref={bgRef}>
-            <img ref={solidLogoRef} className='solid-logo' src={LogoS} alt="S" />
-            <svg width="559pt"
+    return (
+        <div className="logo-container" ref={bgRef}>
+            <img
+                className="solid-logo"
+                ref={solidLogoRef}
+                src={LogoS}
+                alt="S"
+            />
+
+            <svg
+                width="559pt"
                 height="897pt"
                 version="1.0"
                 viewBox="0 0 559 897"
-                xmlns="http://www.w3.org/2000/svg" >
+                xmlns="http://www.w3.org/2000/svg"
+            >
                 <g
                     className="svg-container"
                     transform="translate(0 457) scale(.1 -.1)"
@@ -58,4 +67,4 @@ const Logo = () => {
     )
 }
 
-export default Logo;
+export default Logo
