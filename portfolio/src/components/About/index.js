@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { faAngular, faCss3, faGitAlt, faHtml5, faJsSquare, faReact, } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Loader from 'react-loaders'
+import Sidebar from '../Sidebar';
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -17,6 +18,7 @@ const About = () => {
     return (
 
         <>
+            <Sidebar />
             <div className='container about-page'>
                 <div className='text-zone'>
                     <h1>
