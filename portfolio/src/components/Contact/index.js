@@ -49,7 +49,7 @@ const Contact = () => {
                     </p>
                     <div className='contact-form'>
 
-                        <form ref={form} onSubmit={sendEmail}>
+                        <form ref={form} >
                             <ul>
                                 <li className='half'>
                                     <input type="text" name="name" placeholder="Name" required />
@@ -62,7 +62,7 @@ const Contact = () => {
                                 </li>
                                 <textarea input name="message" placeholder="Message" required />
                                 <li>
-                                    <input type="submit" cassName="flat-button" value="SEND" />
+                                    <input type="submit" className="flat-button" value="SEND" />
                                 </li>
                             </ul>
                         </form>
